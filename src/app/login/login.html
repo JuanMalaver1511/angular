@@ -1,11 +1,27 @@
-
 <div class="login-container">
-<span>Usuario</span>
-<input type="text" placeholder="Ingrese su usuario" #usuarios />
-<br />
-<span>Contraseña</span>
-<input type="password" placeholder="Ingrese su contraseña" #password/>
-<br />
-<button (click)="login(usuarios.value, password.value)">Ingresar</button>
-</div>
+  <div class="login-field">
+    <label for="usuario">Usuario</label>
+    <input 
+      id="usuario"
+      type="text" 
+      placeholder="Ingrese su usuario" 
+      #usuarios 
+      class="input"
+    />
+  </div>
 
+  <div class="login-field">
+    <label for="password">Contraseña</label>
+    <input 
+      id="password"
+      type="password" 
+      placeholder="Ingrese su contraseña" 
+      #password 
+      class="input"
+    />
+  </div>
+
+  <button class="btn-login" (click)="login(usuarios.value, password.value)">Ingresar</button>
+</div>
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}

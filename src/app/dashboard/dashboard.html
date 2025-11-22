@@ -1,1 +1,28 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Dashboard</h1>
+    <button class="logout-btn" (click)="logout()">Cerrar sesión</button>
+  </header>
+
+  <section class="dashboard-grid">
+    <div class="card">
+      <h3>Usuarios</h3>
+      <p>Administra los usuarios del sistema.</p>
+    </div>
+
+    <div class="card">
+      <h3>Reportes</h3>
+      <p>Genera y consulta reportes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Configuración</h3>
+      <p>Ajusta las opciones de tu aplicación.</p>
+    </div>
+
+    <div class="card">
+      <h3>Estadísticas</h3>
+      <p>Revisa métricas en tiempo real.</p>
+    </div>
+  </section>
+</div>
